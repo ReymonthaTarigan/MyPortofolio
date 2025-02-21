@@ -1,97 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <title>home</title>
+    @vite('resources/css/app.css')  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>MyPortofolio</title>
 </head>
 <body>
-<div class="bg-white">
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div class="fixed inset-0 z-50"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-          </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
-            </div>
-            <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div class="body w-full   bg-[#080808]">
+    
+  <header class="bg-[#1B1B1B]   w-full h-20 flex items-center justify-between px-10 fixed">
+        <!-- Menu -->
+         <div class="  w-4/5 mx-auto">
+           <nav class="flex space-x-4 text-gray-400 text-sm md:text-base ">
+                <a href="#home" class="hover:text-white">Home</a>
+                <a href="#aboutme" class="hover:text-white">About Me</a>
+                <a href="#skills" class="hover:text-white">Skills</a>
+                <a href="#experience" class="hover:text-white">Organizational & Committee Experience</a>
+                <a href="#recentwork" class="hover:text-white">Recent work</a>
+                <a href="#contact" class="hover:text-white">Contact</a>
+            </nav>
 
-  <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-          Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+
+         </div>
+        
+
+        
+        <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/reymontha-tarigan-6a053228b" class="text-gray-400 hover:text-white">
+                <i class="fab fa-linkedin">Linkedin</i> 
+            </a>
+            
         </div>
-      </div>
-      <div class="text-center">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Data to enrich your online business</h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+    </header>
+
+
+
+     <!-- Main Content -->
+     <div id="home" class="container  w-4/5 mx-auto  flex items-center justify-center min-h-screen px-6 pt-24">
+        <div class="grid grid-cols-1 md:grid-cols-2  items-center w-full">
+            <!-- Text Content -->
+            <div class="text-left"> 
+                <h2 class="text-white mt-4">Halo semua, saya</h2>
+                <h1 class="text-4xl text-white font-bold">Reymontha Tarigan</h1>
+                <p class="text-gray-400 mt-4 ">
+                    Mahasiswa S1 Teknik Informatika Unpad
+                </p>
+                <a href="#aboutme" class="mt-6 px-6 py-3 bg-green-600 text-black font-semibold rounded-md shadow-lg hover:bg-green-700 inline-block mb-5">
+                    Let's get started &gt;
+                </a>
+
+            </div>
+
+            <!-- Profile Image -->
+            <div class="flex justify-center">
+            <img src="img/profile.jpg" alt="Profile Image" 
+     class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-white border-4 border-gray-700 shadow-lg object-cover">
+
+            </div>
+
         </div>
-      </div>
+
+        
     </div>
-    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+
+    <!-- Introduction Section -->
+<div id="aboutme" class="container w-4/5 mx-auto text-center text-white py-16 pt-24">
+    <h2 class="text-3xl font-bold">Introduction</h2>
+    <p class="text-gray-400 mt-4">
+        Saya seorang mahasiswa S1 Teknik Informatika di Universitas Padjadjaran yang memiliki minat besar dalam pengembangan web dan aplikasi mobile. 
+        Saya berpengalaman dalam menggunakan pengembangan website dengan Laravel, Codeigniter,  Tailwind CSS, dan pengembangan aplikasi Android menggunakan Kotlin.
+    </p>
+    <p class="text-gray-400 mt-2">
+    Saya senang mengeksplorasi teknologi baru dan terus mengasah keterampilan dalam membangun aplikasi yang efisien, fungsional, dan user-friendly. Selain itu, saya memiliki ketertarikan pada arsitektur perangkat lunak, optimalisasi performa aplikasi, dan penerapan best practices dalam pengembangan perangkat lunak.
+    Saya terbuka untuk kesempatan kolaborasi, eksplorasi teknologi baru, serta pengalaman yang dapat memperluas wawasan dan keahlian saya di dunia teknologi.
+    </p>
+</div>
+<!-- Skills Section -->
+<div id="skills" class="container w-4/5 mx-auto text-center text-white py-16 pt-24">
+    <h2 class="text-3xl font-bold">Skills</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+       
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/js.png" alt="JavaScript" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">JavaScript</span>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/cplus.png" alt="C++" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">C++</span>
+        </div>
+
+       
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/php.png" alt="PHP" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">PHP</span>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/java.png" alt="Java" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">Java</span>
+        </div>
+
+        
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/python.png" alt="Python" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">Python</span>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/tailwind.jpeg" alt="Tailwind" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">Tailwind</span>
+        </div>
+
+       
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/ci.png" alt="CodeIgniter" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">CodeIgniter</span>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <img src="img/symbols/laravel.png" alt="Laravel" class="w-16 h-16 rounded-full">
+            <span class="text-lg font-semibold">Laravel</span>
+        </div>
     </div>
-  </div>
 </div>
 
+<!-- Organizational & Committee Experience -->
+<div id="experience" class="container w-4/5 mx-auto text-center text-white py-16 pt-24">
+    <h2 class="text-3xl font-bold">Organizational & Committee Experience</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+       
+        <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+            <h3 class="font-bold text-lg">Staff PTI Himatif Unpad</h3>
+            <p class="text-gray-400 mt-2"><strong>2022 - 2023</strong></p>
+            <p class="text-gray-400 mt-2 text-center">
+            Penanggungjawab Produktif dimana bertugas membentuk tim developer dari warga TI Unpad untuk mengerjakan berbagai proyek IT yang diberikan klien baik dari luar atau dalam Unpad
+            </p>
+        </div>
+
+     
+        <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+            <h3 class="font-bold text-lg">Anggota DPA Himatif Unpad</h3>
+            <p class="text-gray-400 mt-2"><strong>2024</strong></p>
+            <p class="text-gray-400 mt-2 text-center">
+            Bergabung dalam Komisi 4 yang bertugas dalam menampungaspirasi warga TI Unpad
+            </p>
+        </div>
+
+      
+        <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+            <h3 class="font-bold text-lg">Staff Panitia Peluit Himpatif Unpad</h3>
+            <p class="text-gray-400 mt-2"><strong>2022</strong></p>
+            <p class="text-gray-400 mt-2 text-center">
+                Penanggungjawab bagian logistik
+            </p>
+        </div>
+
+      
+        <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+            <h3 class="font-bold text-lg">Staf IT Competition di IFEST Unpad</h3>
+            <p class="text-gray-400 mt-2"><strong>2023</strong></p>
+            <p class="text-gray-400 mt-2 text-center">
+                Penanggungjawab bagian DAC (Data Analyst Competition)
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+ <!-- Recent Work Section -->
+ <div id="recentwork" class="container w-4/5 mx-auto text-center text-white py-16 pt-24">
+    <h2 class="text-3xl font-bold">Recent Work</h2>
+    <p class="text-gray-400 mt-4">
+        Berikut adalah beberapa proyek yang telah saya kerjakan selama menjadi mahasiswa.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+       
+        <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+            <img src="img/project/fnc.png" alt="Fix and Create" class="w-full h-64 object-cover rounded-lg">
+            <h3 class="font-bold text-lg mt-4">Fix and Create</h3>
+            <p class="text-gray-400 mt-2 text-justify">
+                Fix and Create adalah platform yang dirancang untuk membantu mahasiswa Teknik Informatika mengembangkan keterampilan mereka melalui proyek nyata dalam pembuatan aplikasi dan website. Platform ini memungkinkan pengguna untuk mengajukan permintaan pengembangan, berdiskusi dengan tim developer, serta mendapatkan solusi sesuai kebutuhan mereka.
+                <br><br>
+                Dalam proyek ini, saya berperan sebagai Front-End Developer menggunakan Laravel dan Tailwind CSS.
+            </p>
+        </div>
+
+        
+        <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+        <img src="img/project/bioskop.png" alt="Pemesanan Tiket Bioskop" class="w-full h-64 object-contain rounded-lg bg-white">
+
+            <h3 class="font-bold text-lg mt-4">Pemesanan Tiket Bioskop</h3>
+            <p class="text-gray-400 mt-2 text-justify">
+                Website ini merupakan simulasi pemesanan tiket bioskop yang dikembangkan menggunakan CodeIgniter 4 (CI4). Proyek ini mencakup fitur autentikasi pengguna, manajemen database (CRUD), serta simulasi pembayaran untuk pengalaman pengguna yang lebih realistis.
+                <br><br>
+                Dalam project ini saya berperan sebagai FullStack Developer.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Contact Me Section -->
+<div id="contact" class="container w-4/5 mx-auto text-center py-16 pt-24">
+    <h2 class="text-3xl font-bold text-white">Contact Me</h2>
+    <p class="text-gray-500 mt-4">
+        Feel free to reach out through any of the platforms below.
+    </p>
+
+    <div class="flex justify-center space-x-6 mt-6">
+        
+        <a href="https://www.linkedin.com/in/reymontha-tarigan-6a053228b" target="_blank" class="bg-blue-600 text-white p-4 rounded-full hover:bg-blue-700 transition">
+            <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+
+        
+        <a href="https://www.instagram.com/reymonthatarigann" target="_blank" class="bg-pink-500 text-white p-4 rounded-full hover:bg-pink-600 transition">
+            <i class="fab fa-instagram text-2xl"></i>
+        </a>
+
+     
+        <a href="https://github.com/ReymonthaTarigan" target="_blank" class="bg-gray-800 text-white p-4 rounded-full hover:bg-gray-900 transition">
+            <i class="fab fa-github text-2xl"></i>
+        </a>
+
+       
+        <a href="mailto:reymonthatarigan13@gmail.com" class="bg-red-600 text-white p-4 rounded-full hover:bg-red-700 transition">
+            <i class="fas fa-envelope text-2xl"></i>
+        </a>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+  </div>
 </body>
 </html>
